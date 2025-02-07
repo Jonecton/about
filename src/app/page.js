@@ -1,101 +1,110 @@
-import Image from "next/image";
+import SkillsSection from "./components/SkillsSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="h-screen pl-1 sm:pl-4 overflow-y-scroll snap-y snap-mandatory scroll-smooth font-outfit text-lg font-extralight">
+      <section id="home" className="h-screen w-full flex flex-col justify-center text-white snap-start space-y-2 sm:space-y-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-medium">Jonathan <span className="text-black">Ecton</span></h1>
+        <p className="text-black">Edinburg, TX · <a className="underline text-white"href="mailto:jonecton@gmail.com">jonecton@gmail.com</a></p>
+        <p className="">B.S, Computer Science, 12.2023</p>
+        <p className="">University of Texas, Rio Grande Valley</p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section id="about" className="h-screen w-full flex flex-col justify-center sm:items-center text-white snap-start">
+        <h1 className="text-3xl font-semibold text-left sm:text-center sm:text-4xl">
+          Hello, I'm <span className="text-black">Jon</span>, an aspiring software engineer from South Texas.
+        </h1>
+        <div className="mt-6 sm:max-w-3xl text-left sm:text-center">
+          <p className="sm:text-2xl">
+            Hello, my name is Jonathan Ecton, and I am a computer science graduate from the University of Texas Rio Grande Valley. 
+            I am passionate about technology and enjoy learning new programming languages and frameworks. 
+            In my free time, I like to work on personal projects and contribute to open source. 
+            I am always looking for new challenges and opportunities to grow as a developer.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section id="education" className="h-screen w-full flex flex-col justify-center sm:px-4 text-white snap-start">
+      {/* Title */}
+        <h1 className="sm:text-4xl text-3xl font-semibold sm:mb-8 text-left text-center hidden sm:block">Education</h1>
+
+      {/* Timeline Container */}
+        <div className="relative max-w-5xl sm:border-l-4 sm:border-blue-500 sm:pl-6">
+        {/* UTRGV */}
+          <div className="mb-1 sm:mb-8 sm:ml-6">
+            <h2 className="text-2xl font-bold">
+            <span className="sm:hidden">B.S. Computer Science</span> 
+            <span className="hidden sm:inline">Bachelor of Science in Computer Science</span> 
+          </h2>
+          <p className="text-lg text-gray-300">
+            <span className="sm:hidden">UT Rio Grande Valley Edinburg TX</span> {/* Mobile version */}
+            <span className="hidden sm:inline">University of Texas Rio Grande Valley, Edinburg TX</span> {/* Desktop version */}
+          </p>
+          <p className="text-lg text-gray-300">December 2023</p>
+          <p className="text-lg text-gray-300">GPA: 3.52</p>
+          {/* Relevant Courses */}
+          <div className="mt-1 sm:mt-4 bg-gray-800 p-2 sm:p-4 rounded-lg mr-1 sm:mr-0">
+            <h3 className="text-lg font-semibold text-blue-300">Relevant Coursework</h3>
+            <ul className="list-disc pl-5 text-gray-300 grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-2">
+              <li>Software Engineering 1 & 2</li>
+              <li>Data Structures & Algorithms</li>
+              <li className="hidden sm:list-item">Automata</li> 
+              <li>Operating Systems</li>
+              <li>
+                <span className="sm:hidden">OOP in Java</span> {/* Mobile version */}
+                <span className="hidden sm:inline">Object-Oriented Programming in Java</span> {/* Desktop version */}
+              </li>
+              <li>
+                <span className="sm:hidden">Org of Program Languages</span> {/* Mobile version */}
+                <span className="hidden sm:inline">Organization of Programming Languages</span> {/* Desktop version */}
+              </li>
+              <li>UX/UI Design</li>
+              <li className="hidden sm:list-item">Digital Systems Engineering</li> {/* Hidden on mobile */}
+            </ul>
+          </div>
+        </div>
+
+
+    {/* South Texas College */}
+        <div className="mb-8 sm:ml-6">
+          <h2 className="text-2xl font-bold">
+            <span className="sm:hidden">A.S. Computer Science</span> 
+            <span className="hidden sm:inline">Associate of Science in Computer Science</span> 
+          </h2>
+          <p className="text-lg text-gray-300">South Texas College, McAllen TX</p>
+          <p className="text-lg text-gray-300">December 2022</p>
+          <p className="text-lg text-gray-300">Major GPA: 4.0</p>
+          {/* Relevant Courses */}
+          <div className="mt-1 sm:mt-4 bg-gray-800 p-2 sm:p-4 rounded-lg mr-1 sm:mr-0">
+            <h3 className="text-lg font-semibold text-blue-300">Relevant Coursework</h3>
+            <ul className="list-disc pl-5 text-gray-300 grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <li>
+                <span className="sm:hidden">Program Fundamentals I,II,III</span> {/* Mobile version */}
+                <span className="hidden sm:inline">Programming Fundamentals 1, 2, & 3</span> {/* Desktop version */}
+              </li>
+              <li>C Programming in Linux</li>
+              <li>
+                <span className="sm:hidden">Assembly Programming</span> {/* Mobile version */}
+                <span className="hidden sm:inline">Computer Organization (Assembly Programming)</span> {/* Desktop version */}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <section id="skills" className="h-screen w-full flex items-center text-white snap-start">
+      <SkillsSection />
+      </section>
+
+      <section id="projects" className="h-screen w-full flex items-center text-white snap-start">
+        <h1 className="text-4xl">Projects</h1>
+      </section>
+
+      <section id="experience" className="h-screen w-full flex items-center text-white snap-start">
+        <h1 className="text-4xl">Experience</h1>
+      </section>
     </div>
   );
 }

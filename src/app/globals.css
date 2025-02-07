@@ -14,8 +14,20 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  background-repeat: no-repeat;
 }

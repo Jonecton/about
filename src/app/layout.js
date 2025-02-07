@@ -1,5 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+
+
+
+const outfit = Outfit({ subsets: ["latin"], weight: ["200", "500"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +26,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-white`}
       >
-        {children}
+        <div className="flex h-screen w-screen overflow-hidden">
+          <Navbar />
+          <main className="flex-1 overflow-y-scroll h-screen">{children}</main>
+        </div>
       </body>
     </html>
   );
