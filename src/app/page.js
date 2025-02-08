@@ -1,4 +1,6 @@
 import SkillsSection from "./components/SkillsSection";
+import Projects from "./components/Projects";
+import ExperienceSection from "./components/ExperienceSection";
 
 export default function Home() {
   return (
@@ -99,11 +101,11 @@ export default function Home() {
       </section>
 
       <section id="projects" className="h-screen w-full flex items-center text-white snap-start">
-        <h1 className="text-4xl">Projects</h1>
+        <Projects />
       </section>
 
-      <section id="experience" className="h-screen w-full flex items-center text-white snap-start">
-        <h1 className="text-4xl">Experience</h1>
+      <section id="experience" className="h-screen w-full text-white snap-start overflow-y-auto scroll-smooth">
+        <ExperienceSection />
       </section>
     </div>
   );
