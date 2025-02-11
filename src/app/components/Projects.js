@@ -21,7 +21,7 @@ const projects = [
   {
     id: 2,
     title: "Project Two",
-    images: ["/securelenslogin.png", "/securelenslogin.png", "/securelenslogin.png"],
+    images: ["/Blackboard/Announcements.png", "/Blackboard/Calendar.png", "/Blackboard/Courses.png"],
     description:
       "This is a description of Project Two. It is built with modern technologies and has a sleek interface.",
   },
@@ -29,9 +29,10 @@ const projects = [
     id: 3,
     title: "Homebrew",
     images: [
-      "homebrewsplash.png",
-      "homebrewsplash.png",
-      "homebrewsplash.png",
+      "/Homebrew/homebrewsplash.png",
+      "/Homebrew/homebrew_home.png",
+      "/Homebrew/homebrew_selection.png",
+      "/Homebrew/homebrew_timer.png",
     ],
     description:
       "Homebrew is a Flutter-based coffee brewing assistant developed for a Software Engineering 2 assignment. The app lets users select a coffee recipe, input their desired volume, and receive timed, step-by-step instructions tailored to their coffee maker. The project followed software engineering best practices, including pull requests, testing, CI/CD pipelines, and was built using Flutter and Dart.",
@@ -51,7 +52,7 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <div key={project.id} className="relative">
               <img
-                src={project.images[0]} // Show first image as thumbnail
+                src={project.images[0]}
                 alt={project.title}
                 className="object-cover rounded-lg shadow-lg cursor-pointer"
                 onClick={() => setExpandedProject(project.id)}
@@ -69,7 +70,7 @@ export default function ProjectsSection() {
     <div
       className="max-w-xl w-full bg-white rounded-lg shadow-xl p-6 relative flex flex-col overflow-hidden"
       style={{ maxHeight: "90vh" }}
-      onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the content
+      onClick={(e) => e.stopPropagation()}
     >
       {/* Scrollable Content */}
       <div className="overflow-y-auto flex-1 pr-2">
@@ -114,10 +115,10 @@ export default function ProjectsSection() {
       </div>
 
       {/* Desktop View: Grid layout */}
-      <div className="hidden sm:grid grid-cols-3 gap-8">
+      <div className="hidden sm:grid grid-cols-3 gap-8 w-full h-full">
         {projects.map((project) => (
           <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src={project.images[0]} alt={project.title} className="w-full h-48 object-cover" />
+            <img src={project.images[0]} alt={project.title} className="w-full max-h-[300px] object-contain mt-4" />
             <div className="p-4">
               <h2 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h2>
               <p className="text-gray-700">{project.description}</p>
